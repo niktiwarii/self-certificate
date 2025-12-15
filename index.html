@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self Promise Certificate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🎵 Audio -->
+<audio id="bgMusic" src="music/background.mp3" loop></audio>
+<audio id="celebrateMusic" src="music/celebrate.mp3"></audio>
+
+<!-- 🌟 Intro -->
+<section id="intro" class="intro">
+  <h1>Your year will be happier than the earlier ✨</h1>
+  <button id="startBtn">Enter My New Year</button>
+</section>
+
+<!-- 📝 Form -->
+<section id="formSection" class="app hidden">
+  <h2>My Self Promise</h2>
+
+  <label>Name</label>
+  <input id="name">
+
+  <label>Year</label>
+  <input id="year" value="2026">
+
+  <label>Promise</label>
+  <textarea id="promise"></textarea>
+
+  <label>Signature</label>
+  <canvas id="sign" width="260" height="80"></canvas>
+
+  <button id="createBtn">Create Certificate</button>
+</section>
+
+<!-- 🏆 Certificate -->
+<section id="certificate" class="certificate hidden">
+  <div class="ribbon">Self-Signed</div>
+
+  <h2>Promise Certificate</h2>
+  <p id="cy"></p>
+
+  <div id="cp" class="promise-box"></div>
+
+  <img id="sigImg">
+
+  <div class="signature">
+    <span id="cn"></span>
+    <span id="cd"></span>
+  </div>
+
+  <!-- QR -->
+  <div class="qr-box">
+    <div id="qrLink"></div>
+  </div>
+
+  <!-- Music -->
+  <div class="music-control">
+    <button id="playMusic">Play Music</button>
+    <button id="pauseMusic">Pause Music</button>
+  </div>
+
+  <div class="actions">
+    <button id="shareBtn">Share</button>
+    <button onclick="window.print()">Save PDF</button>
+  </div>
+</section>
+
+<!-- JS (ORDER MATTERS) -->
+<script src="qrcode.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
